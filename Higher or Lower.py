@@ -229,30 +229,57 @@ def EasyScore_Show():
     print("EASY LEVEL SCORES")
     print("-x-x-x-x-x-x-x-x-")
     sleep(1)
+    max_score = []
     for data in scoreReader:
+        max_score.append(data[2])
         print(data)
+    high = max(max_score)
+    highscorefile = open("Score/Easylevelscore.csv","r")
+    highscoreReader = csv.reader(highscorefile)
+    for i in highscoreReader:
+        if i[2] == high:       
+            print("-x-x-x-x-x-x-x-x-")
+            print("High Score in Easy Level is " + str(i[2] + " by " + str(i[0] )))
     scoreFile.close()
 
 def MediumScore_Show():
-    #medium Level Score table show
+    #Medium Level Score table show
     scoreFile = open("Score/Mediumlevelscore.csv","r")
     scoreReader = csv.reader(scoreFile)
-    print("Medium LEVEL SCORES")
+    print("MEDIUM LEVEL SCORES")
     print("-x-x-x-x-x-x-x-x-")
     sleep(1)
+    max_score = []
     for data in scoreReader:
+        max_score.append(data[2])
         print(data)
+    high = max(max_score)
+    highscorefile = open("Score/Mediumlevelscore.csv","r")
+    highscoreReader = csv.reader(highscorefile)
+    for i in highscoreReader:
+        if i[2] == high:       
+            print("-x-x-x-x-x-x-x-x-")
+            print("High Score in Medium Level is " + str(i[2] + " by " + str(i[0] )))
     scoreFile.close()
 
 def HardScore_Show():
-    #Hard Level Score table show
+    #Medium Level Score table show
     scoreFile = open("Score/Hardlevelscore.csv","r")
     scoreReader = csv.reader(scoreFile)
-    print("Hard LEVEL SCORES")
+    print("HARD LEVEL SCORES")
     print("-x-x-x-x-x-x-x-x-")
     sleep(1)
+    max_score = []
     for data in scoreReader:
+        max_score.append(data[2])
         print(data)
+    high = max(max_score)
+    highscorefile = open("Score/Hardlevelscore.csv","r")
+    highscoreReader = csv.reader(highscorefile)
+    for i in highscoreReader:
+        if i[2] == high:       
+            print("-x-x-x-x-x-x-x-x-")
+            print("High Score in Hard Level is " + str(i[2] + " by " + str(i[0] )))
     scoreFile.close()
 
 def scoreTable():
